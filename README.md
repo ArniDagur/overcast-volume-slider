@@ -1,4 +1,4 @@
 # overcast-volume-slider
 Volume Slider Userscript for Overcast.fm
 
-![alt text](http://i.imgur.com/PXPi97n.png)
+![Image of the volume slider](http://i.imgur.com/RYdHSfc.png)
