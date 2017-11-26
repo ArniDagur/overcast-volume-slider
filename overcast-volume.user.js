@@ -10,19 +10,19 @@
 
 (function() {
     'use strict';
-    var div = document.getElementById('speedcontrols');
-    if (div !== null) {
-        div.innerHTML += '<div class="smallcaps centertext">Volume: <span id="volumenr">1</span></div><input id="volumecontrol" type="range" min="0" max="1" step="0.01" value="1"></input>';
-        var player = document.getElementById('audioplayer');
-        var volcontrol = document.getElementById('volumecontrol');
-        var volnr = document.getElementById('volumenr');
-        volcontrol.style.cssText = 'width: 100%;';
-        volcontrol.addEventListener("change", changeVolume);
-        volcontrol.addEventListener("input", changeVolume);
+    var vs_div = document.querySelector("html body div.content.pure-u-1 div.pure-g div.pure-u-1.pure-u-sm-3-5 .fullart_container");
+    if (vs_div !== null) {
+        vs_div.innerHTML += '<div><div class="smallcaps centertext">Volume: <span id="volumenr">1</span></div><input id="volumecontrol" type="range" min="0" max="1" step="0.01" value="1"></input></div>';
+        var vs_player = document.getElementById('audioplayer');
+        var vs_volcontrol = document.getElementById('volumecontrol');
+        var vs_volnr = document.getElementById('volumenr');
+        vs_volcontrol.style.cssText = 'width: 100%;';
+        vs_volcontrol.addEventListener("change", vs_changeVolume);
+        vs_volcontrol.addEventListener("input", vs_changeVolume);
     }
-    function changeVolume(){
-            var value = volcontrol.value;
-            player.volume = value;
-            volnr.innerHTML = value;
+    function vs_changeVolume(){
+            var vs_value = vs_volcontrol.value;
+            vs_player.volume = vs_value;
+            vs_volnr.innerHTML = vs_value;
     }
 })();
