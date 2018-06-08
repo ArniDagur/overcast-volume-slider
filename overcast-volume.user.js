@@ -19,6 +19,10 @@
         vs_volcontrol.style.cssText = 'width: 100%;';
         vs_volcontrol.addEventListener("change", vs_changeVolume);
         vs_volcontrol.addEventListener("input", vs_changeVolume);
+        var vs_sheet = window.document.styleSheets[0];
+        vs_sheet.insertRule('#volumecontrol::-webkit-slider-runnable-track{width:100%;height:20px;background-color:#ffdbc1;border-radius:9px}', vs_sheet.cssRules.length);
+        vs_sheet.insertRule('#volumecontrol::-webkit-slider-thumb{-webkit-appearance:none;height:20px;width:20px;border-radius:50%;background:#fc7e0f}', vs_sheet.cssRules.length);
+        vs_sheet.insertRule('#volumecontrol{width:100%;-webkit-appearance:none;background-color:transparent;outline:0}', vs_sheet.cssRules.length);
     }
     function vs_changeVolume(){
             var vs_value = vs_volcontrol.value;
